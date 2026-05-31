@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0e0c0a;
+  --bg2: #171512;
+  --bg3: #1f1c18;
+  --bg4: #282420;
+  --border: #2e2a24;
+  --border2: #3d3830;
+  --text: #f0ead8;
+  --text2: #b8ad98;
+  --text3: #7a7060;
+  --gold: #c9a84c;
+  --gold2: #e8c97a;
+  --gold3: #f5e4a8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+/* Prose in AI messages */
+.prose-history strong { color: var(--gold2); }
+.prose-history em { color: var(--text2); }
+.prose-history p { margin-bottom: 0.75rem; line-height: 1.75; }
+.prose-history h3 { color: var(--gold); font-family: 'Playfair Display', serif; margin: 1rem 0 0.5rem; }
+
+/* Typing dots */
+@keyframes bounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-6px); }
+}
+.typing-dot { animation: bounce 1.4s ease infinite; }
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }

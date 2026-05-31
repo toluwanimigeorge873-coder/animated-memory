@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+
+:root {
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --gold-bright: #f5e4a8;
+  --ink: #0e0c0a;
+  --ink-2: #171512;
+  --ink-3: #1f1c18;
+  --ink-4: #282420;
+  --border: #2e2a24;
+  --border-2: #3d3830;
+  --text: #f0ead8;
+  --text-2: #b8ad98;
+  --text-3: #7a7060;
+}
+
+body { background: var(--ink); color: var(--text); }
+
+.scrollbar-thin::-webkit-scrollbar { width: 4px; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 2px; }
+.scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes bounce { 0%,60%,100% { transform: translateY(0); } 30% { transform: translateY(-6px); } }
+
+.animate-fade-up { animation: fadeUp 0.3s ease both; }
+.typing-dot { animation: bounce 1.4s ease infinite; }
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
